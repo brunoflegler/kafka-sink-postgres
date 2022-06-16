@@ -1,0 +1,20 @@
+{
+  "name": "kafka-sink-postgres",
+  "version": "1.0.0",
+  "description": "kafka-sink-postgres",
+  "main": "index.js",
+  "scripts": {
+    "migration1": "node_modules/.bin/sequelize db:migrate --config /infrastructure/postgres/postgres1.js",
+    "migration2": "node_modules/.bin/sequelize db:migrate --config /infrastructure/postgres/postgres2.js",
+    "migrations": "npm run migration1",
+    "seeders": "node_modules/.bin/sequelize db:seed:all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.7.3",
+    "sequelize": "^6.20.1",
+    "sequelize-cli": "^6.4.1"
+  }
+}

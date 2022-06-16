@@ -1,0 +1,12 @@
+.DS_Store
+.dockerignore
+.git
+.github
+.localstack
+.vscode
+coverage
+.editorconfig
+.eslintrc.json
+.gitignore
+prettier.config.js
+README.md

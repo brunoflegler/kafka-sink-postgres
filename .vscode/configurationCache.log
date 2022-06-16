@@ -1,0 +1,1 @@
+{"buildTargets":["build","connectors","kafka","kafka-sink-postgres","migrate","postgres1","postgres2","prepare"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
