@@ -30,5 +30,5 @@ seeders:
 	@docker-compose run --rm kafka-sink-postgres npm run seeders
 .PHONY: seeders
 
-prepare: build postgres1 postgres2 kafka migrations seeders debezium sink
+prepare: build postgres1 postgres2 kafka migrations debezium sink
 .PHONY: prepare
