@@ -8,20 +8,10 @@ VALUES('ev_cj8pzyg181byjvt3sf6980fwt', 'gateway_request_finished', 'internal', '
 
 https://docs.confluent.io/cloud/current/connectors/cc-postgresql-sink.html
 
- # "topics": "core.public.Events",
-        # "connector.class": "PostgresSink",
-        # "tasks.max": 1,
-        # "connection.url": "jdbc:postgresql://postgres2:5432",
-        # "connection.user": "postgres",
-        # "connection.password": "postgres",
-        # "dialect.name": "PostgreSqlDatabaseDialect",
-        # "insert.mode": "insert",
-        # "table.name.format": "Events",
-        # "auto.create": true,
-        # "key.converter": "io.confluent.connect.avro.AvroConverter",
-        # "value.converter": "io.confluent.connect.avro.AvroConverter",
-        # "key.converter.schema.registry.url": "http://schema-registry:8081",
-        # "value.converter.schema.registry.url": "http://schema-registry:8081"
+https://docs.confluent.io/cloud/current/connectors/cc-postgresql-sink.html#number-of-tasks-for-this-connector
 
+https://github.com/confluentinc/kafka-connect-jdbc/issues/921
 
-        https://docs.confluent.io/cloud/current/connectors/cc-postgresql-sink.html#number-of-tasks-for-this-connector
+https://github.com/pagarme/data-kafka-connectors/blob/master/s3-sink-data/s3-sink-data-big-four.yml
+
+https://stackoverflow.com/questions/4168689/is-it-possible-to-specify-the-schema-when-connecting-to-postgres-with-jdbc

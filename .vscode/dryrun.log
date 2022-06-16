@@ -1,6 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/bruno.flegler/developer/me/github/kafka-sink-postgres'
-docker build -t base .
- 
-make: Leaving directory `/Users/bruno.flegler/developer/me/github/kafka-sink-postgres'
- 

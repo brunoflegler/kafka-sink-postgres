@@ -9,7 +9,7 @@ configureDebezium () {
       "config": {
         "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
         "tasks.max": "1",
-        "database.hostname": "postgres1",
+        "database.hostname": "livedb",
         "plugin.name": "wal2json",
         "database.port": "5432",
         "database.user": "postgres",

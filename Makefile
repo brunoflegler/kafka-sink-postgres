@@ -6,13 +6,13 @@ kafka:
 	@docker-compose up -d zookeeper kafka schema-registry connect akhq
 .PHONY: kafka
 
-postgres1:
-	@docker-compose up -d postgres1 
-.PHONY: postgres1
+livedb:
+	@docker-compose up -d livedb 
+.PHONY: livedb
 
-postgres2:
-	@docker-compose up -d postgres2
-.PHONY: postgres2
+eventsdb:
+	@docker-compose up -d eventsdb
+.PHONY: eventsdb
 
 debezium:
 	./scripts/connectors/debezium.sh
@@ -30,5 +30,5 @@ seeders:
 	@docker-compose run --rm kafka-sink-postgres npm run seeders
 .PHONY: seeders
 
-prepare: build postgres1 postgres2 kafka migrations debezium sink
+prepare: build livedb eventsdb kafka migrations debezium sink
 .PHONY: prepare

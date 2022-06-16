@@ -4,11 +4,11 @@
   "description": "kafka-sink-postgres",
   "main": "index.js",
   "scripts": {
-    "migration1": "node_modules/.bin/sequelize db:migrate --config /infrastructure/postgres/postgres1.js --migrations-path /infrastructure/postgres/migrations",
-    "migration2": "node_modules/.bin/sequelize db:migrate --config /infrastructure/postgres/postgres2.js --migrations-path /infrastructure/postgres/migrations",
-    "migrations": "npm run migration1; npm run migration2",
-    "seeder1": "node_modules/.bin/sequelize db:seed:all --config /infrastructure/postgres/postgres1.js --seeders-path /infrastructure/postgres/seeders ",
-    "seeders": "npm run seeder1"
+    "livedb-migrations": "node_modules/.bin/sequelize db:migrate --config /infrastructure/postgres/livedb/config.js --migrations-path /infrastructure/postgres/livedb/migrations",
+    "eventsdb-migrations": "node_modules/.bin/sequelize db:migrate --config /infrastructure/postgres/eventsdb/config.js --migrations-path /infrastructure/postgres/eventsdb/migrations",
+    "migrations": "npm run livedb-migrations; npm run eventsdb-migrations",
+    "livedb-seeders": "node_modules/.bin/sequelize db:seed:all --config /infrastructure/postgres/livedb/config.js --seeders-path /infrastructure/postgres/livedb/seeders ",
+    "seeders": "npm run livedb-seeders"
   },
   "keywords": [],
   "author": "",

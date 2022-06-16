@@ -10,24 +10,18 @@ configureSink () {
         "topics": "core.public.Events",
         "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
         "input.data.format": "AVRO",
-        "connection.url": "jdbc:postgresql://postgres2:5432/postgres",
-        "connection.host": "postgres2",
-        "connection.port": "5432",
+        "connection.url": "jdbc:postgresql://eventsdb:5432/postgres?stringtype=unspecified",
         "connection.user": "postgres",
         "connection.password": "postgres",
-        "db.name": "postgres",
         "dialect.name": "PostgreSqlDatabaseDialect",
         "table.name.format": "Events",
         "insert.mode": "insert",
-        "db.timezone": "UTC",
         "auto.create": "true",
-        "auto.evolve": "true",
+        "auto.evolve": "false",
         "transforms": "unwrap",
         "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
         "transforms.unwrap.drop.tombstones": "false",
-        "transforms.unwrap.add.fields": "op,source.ts_ms",
-        "tasks.max": "1",
-        "timezone": "UTC"
+        "tasks.max": "1"
       }
     }
   ');

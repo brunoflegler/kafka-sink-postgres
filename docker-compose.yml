@@ -7,17 +7,17 @@ services:
     env_file:
       - development.env
     links:
-      - postgres1
+      - livedb
     depends_on:
-      - postgres1
+      - livedb
     networks:
       - indexer
 
-  postgres1:
-    hostname: postgres1
-    container_name: postgres1
+  livedb:
+    hostname: livedb
+    container_name: livedb
     build:
-      context: ./infrastructure/postgres
+      context: ./infrastructure/postgres/livedb
       dockerfile: Dockerfile
     environment:
       - POSTGRES_USER=postgres
@@ -28,11 +28,11 @@ services:
     networks:
       - indexer
 
-  postgres2:
-    hostname: postgres2
-    container_name: postgres2
+  eventsdb:
+    hostname: eventsdb
+    container_name: eventsdb
     build:
-      context: ./infrastructure/postgres
+      context: ./infrastructure/postgres/eventsdb
       dockerfile: Dockerfile
     environment:
       - POSTGRES_USER=postgres
@@ -118,8 +118,8 @@ services:
       retries: 10
     links:
       - kafka
-      - postgres1
-      - postgres2
+      - livedb
+      - eventsdb
     environment:
       CONNECT_BOOTSTRAP_SERVERS: "kafka:9092"
       CONNECT_GROUP_ID: "connect"
