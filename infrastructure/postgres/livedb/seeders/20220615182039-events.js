@@ -8,14 +8,14 @@ module.exports = {
           id: "ev_cj8pzyg181byjvt3sf6980fwt",
           name: "gateway_request_finished",
           referer: "internal",
-          company_id: "58ed24ad1982382b0f8462c9",
+          company_id: "58ed24ad1982382b0111111c9",
           model: "transaction",
           model_id: "2231674",
-          payload: "{\"id\":\"gr_cj8pzyeom1by5vt3s1kozdcry\",\"status\":\"success\",\"first_processed_operation_id\":\"go_cj8pzyeuu1byavt3so7yxsqq5\",\"last_processed_operation_id\":\"go_cj8pzyfcn1byhvt3sod1tzrxc\",\"metadata\":{\"desiredStatus\":\"paid\",\"failureAction\":\"changeStatus\",\"failureStatus\":\"refused\",\"shouldUpdateCard\":true},\"is_async\":true}",
+          payload: "{\"id\":\"gr_1\"}",
           internal: true,
           created_at: "2021-10-13T14:37:04.556Z",
           updated_at: "2021-10-13T14:37:04.556Z",
-          json_payload: "{\"id\":\"gr_cj8pzyeom1by5vt3s1kozdcry\",\"status\":\"success\",\"first_processed_operation_id\":\"go_cj8pzyeuu1byavt3so7yxsqq5\",\"last_processed_operation_id\":\"go_cj8pzyfcn1byhvt3sod1tzrxc\",\"metadata\":{\"desiredStatus\":\"paid\",\"failureAction\":\"changeStatus\",\"failureStatus\":\"refused\",\"shouldUpdateCard\":true},\"is_async\":true}",
+          json_payload: "{\"id\":\"gr_1\"}",
           version: "1"
         }
       ]
