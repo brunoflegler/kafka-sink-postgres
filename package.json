@@ -4,19 +4,27 @@
   "description": "kafka-sink-postgres",
   "main": "index.js",
   "scripts": {
+    "dev": "CLIMEM=8999 nodemon -r climem src/index.js",
     "livedb-migrations": "node_modules/.bin/sequelize db:migrate --config /infrastructure/postgres/livedb/config.js --migrations-path /infrastructure/postgres/livedb/migrations",
     "eventsdb-migrations": "node_modules/.bin/sequelize db:migrate --config /infrastructure/postgres/eventsdb/config.js --migrations-path /infrastructure/postgres/eventsdb/migrations",
     "migrations": "npm run livedb-migrations; npm run eventsdb-migrations",
     "livedb-seeders": "node_modules/.bin/sequelize db:seed:all --config /infrastructure/postgres/livedb/config.js --seeders-path /infrastructure/postgres/livedb/seeders",
     "eventsdb-seeders": "node_modules/.bin/sequelize db:seed:all --config /infrastructure/postgres/eventsdb/config.js --seeders-path /infrastructure/postgres/eventsdb/seeders ",
-    "seeders": "npm run livedb-seeders; npm run eventsdb-seeders"
+    "seeders": "npm run livedb-seeders; npm run eventsdb-seeders",
+    "dashboard": "climem 8999 localhost"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "escriba": "^2.10.0",
+    "log4js": "^6.5.2",
     "pg": "7.11.0",
     "sequelize": "5.18.1",
     "sequelize-cli": "5.5.0"
+  },
+  "devDependencies": {
+    "climem": "^1.0.3",
+    "nodemon": "1.18.7"
   }
 }

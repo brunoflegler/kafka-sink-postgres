@@ -10,7 +10,7 @@ configureSink () {
         "topics": "core.public.Events",
         "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
         "input.data.format": "AVRO",
-        "connection.url": "jdbc:postgresql://eventsdb:5432/postgres?stringtype=unspecified&search_path=public",
+        "connection.url": "jdbc:postgresql://eventsdb:5432/eventsdb?stringtype=unspecified&search_path=public",
         "connection.user": "postgres",
         "connection.password": "postgres",
         "dialect.name": "PostgreSqlDatabaseDialect",

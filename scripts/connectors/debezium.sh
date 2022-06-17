@@ -14,7 +14,7 @@ configureDebezium () {
         "database.port": "5432",
         "database.user": "postgres",
         "database.password": "postgres",
-        "database.dbname": "postgres",
+        "database.dbname": "livedb",
         "database.server.name": "core",
         "table.include.list": "public.Events",
         "database.history.kafka.bootstrap.servers": "http://kafka:9092",

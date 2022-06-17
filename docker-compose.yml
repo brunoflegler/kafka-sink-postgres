@@ -6,10 +6,20 @@ services:
     container_name: kafka-sink-postgres
     env_file:
       - development.env
+    command: "npm run dev"
+    expose:
+      - 8999
+    ports:
+      - "8999:8999"
     links:
       - livedb
+      - eventsdb
     depends_on:
       - livedb
+      - eventsdb
+    working_dir: /code
+    volumes:
+      - ./:/code
     networks:
       - indexer
 
@@ -21,7 +31,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_DB=postgres
+      - POSTGRES_DB=livedb
       - POSTGRES_PASSWORD=postgres
     ports:
        - 5432:5432
@@ -36,7 +46,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_DB=postgres
+      - POSTGRES_DB=eventsdb
       - POSTGRES_PASSWORD=postgres
     ports:
        - 5433:5432

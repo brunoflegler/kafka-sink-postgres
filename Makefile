@@ -30,5 +30,9 @@ seeders:
 	@docker-compose run --rm kafka-sink-postgres npm run seeders
 .PHONY: seeders
 
-prepare: build livedb eventsdb kafka migrations debezium sink
+kafka-sink-postgres:
+	@docker-compose up -d --build kafka-sink-postgres
+.PHONY: kafka-sink-postgres
+
+prepare: build livedb eventsdb kafka migrations debezium sink kafka-sink-postgres
 .PHONY: prepare
