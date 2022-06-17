@@ -10,3 +10,4 @@ coverage
 .gitignore
 prettier.config.js
 README.md
+node_modules
