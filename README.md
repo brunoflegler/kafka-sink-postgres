@@ -15,3 +15,8 @@ https://github.com/confluentinc/kafka-connect-jdbc/issues/921
 https://github.com/pagarme/data-kafka-connectors/blob/master/s3-sink-data/s3-sink-data-big-four.yml
 
 https://stackoverflow.com/questions/4168689/is-it-possible-to-specify-the-schema-when-connecting-to-postgres-with-jdbc
+
+
+https://rmoff.net/2021/03/12/kafka-connect-jdbc-sink-deep-dive-working-with-primary-keys/
+
+https://jdbc.postgresql.org/documentation/head/connect.html
